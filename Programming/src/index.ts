@@ -40,7 +40,7 @@ const startServer = () => {
     app.get('/admin/coin', auth, admin, coin)
     app.get('/admin/coins', auth, admin, allCoin)
  
-    app.listen('4000', () => {
+    app.listen(process.env.PORT || 4000, () => {
         console.log('Server is running at port 4000')
     })
     
